@@ -1,0 +1,136 @@
+.menu {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    z-index: 20;
+}
+
+.navbody {
+    position: relative;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navmenu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    gap: 12px;
+    margin-top: 50px;
+}
+
+.menuname {
+    margin-left: -70px;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.menuname a {
+    font-weight: 400;
+}
+
+
+.nav_indicator {
+    margin-left: 30px;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    border-radius: 50%;
+    transform: scale(0) translateX(-50%);
+    transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: 27;
+}
+
+.menuname:hover {
+    .nav_indicator {
+        transform: scale(1) translateX(-50%);
+    }
+}
+
+.header {
+    font-size: 48px;
+}
+
+.header p {
+    margin-left: -20px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: gray;
+}
+
+.header hr {
+    width: 120%;
+    margin-left: -20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray ;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.socialname{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin-left: -60px;
+    list-style: none;
+    font-size: 12px;
+    margin-top: 60px;
+    
+    a{
+        cursor: pointer;
+        font-weight: 500;
+    }
+}
+
+.underline {
+    top: 20px;
+    width: auto;
+    height: 1px;
+    background-color: white;
+    position: relative;
+    transform: scale(0);
+    transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: 27;
+}
+
+
+
+
+.social_name:hover {
+    .underline {
+        transform: scale(1);
+    }
+}
+
+
+.svgCurve {
+    position: absolute;
+    top: 0;
+    left: -99px;
+    width: 100px;
+    height: 100vh;
+    fill: rgb(41, 41, 41);
+    stroke: none;
+    z-index: 5;
+    transition: all 0.2s cubic-bezier(0.75, 0, 0.24, 1);
+}

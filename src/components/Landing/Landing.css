@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.main {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.main img {
+    object-fit: contain;
+    height: 130%;
+    margin-top: -130px;
+}
+
+.sliderContainer {
+    position: absolute;
+    top: calc(100vh - 260px);
+}
+
+.name_slider {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+}
+
+.name_slider p {
+    margin: 40px 10px;
+    color: #040107;
+    opacity: 0.6;
+    font-size: 180px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+}
+
+.name_slider p:nth-of-type(2) {
+    position: absolute;
+    left: 100%;
+}
+
+
+
+
+.title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: 10;
+    margin-top: 180px;
+    margin-left: 600px;
+    font-size: 28px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.title img {
+    margin-left: 150px;
+    transform: rotate(-90deg);
+    height: 25px;
+    margin-bottom: -30px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.projects {
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+.projects h1 {
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 100px 200px;
+
+}
+
+.buttons {
+    display: flex;
+    float: right;
+    margin-right: 200px;
+    margin-top: -100px;
+    gap: 20px;
+}
+
+button {
+    p {
+        margin: 5px;
+    }
+}
+
+button:disabled {
+    background: #000;
+    color: #fff;
+    border-radius: 35px;
+}
+
+Button {
+    all: unset;
+}
+
+
+
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.project_table {
+    width: 70%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.project_table thead th {
+    text-align: left;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #999;
+    border-bottom: 1px solid #ddd;
+}
+
+.project_table tbody tr {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.project_table tbody tr:hover {
+    color: lightgray;
+    transition: all 0.2s ease-in-out;
+}
+
+.project_table td {
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.project_table td:first-child {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+
+.project_table tr:hover td:first-child {
+    transform: translateX(-10px);
+    transition: all 0.3s;
+}
+
+.project_table tr:hover td {
+    transform: translateX(10px);
+    transition: all 0.3s;
+}
+
+.project_content.grid {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    gap: 0px;
+    cursor: pointer;
+}
+
+.project_prop img {
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+}
+
+.modal {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+}
+
+.modal_active {
+    display: none;
+}
+
+.cursor,
+.cursorLabel {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #396cef;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+    z-index: 20;
+}
+
+
+.project_prop {
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    padding: 50px;
+
+
+    h3 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 300;
+    border-top: 1px solid gray;
+
+}
+
+button {
+    all: unset;
+}
+
+
+.section_project {
+    width: 100%;
+}
+
+.bottom_container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+
+.github {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+
+}
+
+.github_logo {
+    display: flex;
+    gap: 10px;
+    color: white;
+    font-size: 80px;
+}
+
+.github_link {
+    font-size: 50px;
+}
+
+
+hr {
+    height: 200px;
+    width: 0;
+}
