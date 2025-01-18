@@ -72,10 +72,9 @@ const Contact = (data) => {
                         {socialItem.map((item, index) => (
                             <Magnatic key={index}>
                                 <motion.div
-                                    // variants={slide}
-                                    // animate="enter"
-                                    // exit="exit"
-                                    // initial="initial"
+                                    animate="enter"
+                                    exit="exit"
+                                    initial="initial"
                                     custom={data}
                                     key={index}
                                     className='social_name'
