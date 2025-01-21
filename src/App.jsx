@@ -9,9 +9,11 @@ import Project from './components/Project/Project.jsx';
 import SlidingImages from './components/SlidingImages/SlidingImages.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import { AnimatePresence } from 'framer-motion';
+import Home from './pages/Home/Home.jsx';
+import Curve from './components/common/Curve/Curve.jsx';
 
 
-function App() {
+function App({ Component, pageProps, router }) {
     const [loading, setLoading] = useState(true);
 
 
@@ -26,7 +28,6 @@ function App() {
         setTimeout(() => {
             document.body.style.cursor = 'default';
             document.body.style.overflow = 'visible';
-
         }, 3000)
     }, [])
 
@@ -40,6 +41,8 @@ function App() {
                     loading && <Loader />
                 }
             </AnimatePresence>
+
+            <Home />
             <Menu />
             <Landing />
             <Desc />

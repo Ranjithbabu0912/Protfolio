@@ -53,13 +53,16 @@
     font-size: 28px;
     font-weight: 400;
     opacity: 0.7;
+
+    .arrow-icon {
+        margin-bottom: -30px;
+    }
 }
 
 .title img {
     margin-left: 150px;
-    transform: rotate(-90deg);
-    height: 25px;
-    margin-bottom: -30px;
+    height: 30px;
+    transform: rotate(-45deg);
 }
 
 

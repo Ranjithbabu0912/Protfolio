@@ -1,0 +1,8 @@
+.curve{
+    svg, .background{
+        height: calc(100vh + 600px);
+        width: 100vw;
+        left: 0;
+        top: 0;
+    }
+}

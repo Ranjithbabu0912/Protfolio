@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Img } from 'react-image';
 import background from '../../assets/background-removebg.png';
-import Navbar from '../Navbar/Navbar';
+import Curve from '../common/Curve/Curve';
 
 
 function Landing() {
@@ -17,6 +17,10 @@ function Landing() {
 
     let xPercent = 0;
     let direction = 1;
+
+
+
+    // scrolltrigger for head text
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +37,8 @@ function Landing() {
             x: "-=300px",
         });
     }, []);
+
+
 
     const animation = () => {
         if (xPercent <= -100) {
@@ -55,10 +61,8 @@ function Landing() {
 
     return (
         <div>
-            <Navbar />
-            
             <div className='title'>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdElEQVR4nO3VQQqAMAwF0TmFiFfU4wrF08RNFyJYWzEpyh/I/hECAaVUuRkY6dQCGJB6IQZgzYgNmIRAm+CbN2F5uiHsbUArwgXQgnAD1CJcATUId8AdIgRQQoQBrhChAPLrTodXHg44b8IFYA/mXwCl/tMODDhfZD13xyAAAAAASUVORK5CYII=" alt="down-right-arrow" />
+                <p className='arrow-icon'><img src="/right-arrow.png" alt="right-arrow" /></p>
 
                 <p>Frontend <br /> Developer &<br /> Designer</p>
             </div>

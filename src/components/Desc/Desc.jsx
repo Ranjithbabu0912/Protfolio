@@ -30,6 +30,7 @@ const Desc = () => {
                 <motion.p variants={opacity} initial="initial" animate={isInView ? "open" : "colsed" } >
                 The blend of my passion for design, coding, and user interaction uniquely positions me in the web design world.</motion.p>
             </div>
+            
             <Link to="/about">
                 <Button className="button" >
                     <img src={about_pic} alt="about_pic" />

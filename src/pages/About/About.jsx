@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import './About.css'
 import profile from '../../assets/profile.jpg'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Curve from '../../components/common/Curve/Curve'
 
 const About = () => {
 
@@ -25,7 +26,7 @@ const About = () => {
     
 
     return (
-        <div>
+        <Curve>
             <Navbar />
             <br />
             <Menu />
@@ -59,7 +60,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Curve>
     )
 }
 

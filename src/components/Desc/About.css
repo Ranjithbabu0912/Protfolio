@@ -1,14 +1,13 @@
 .description {
-    margin-top: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
+    margin: 100px 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     .body {
         display: flex;
-        max-width: 1400px;
+        flex-direction: column;
+        width: 500px;
         gap: 50px;
         position: relative;
         
@@ -41,13 +40,14 @@
 }
 
 .button {
-    left: calc(90% - 200px);
+    position: absolute;
+    top: 120%;
+    left: calc(90% - 350px);
     width: 180px;
     height: 180px;
     background-color: #1c1d20;
     color: white;
     border-radius: 50%;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;

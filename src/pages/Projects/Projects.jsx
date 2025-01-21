@@ -9,6 +9,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
 import styles from '../../components/Project/modal/style.module.css'
 import profile  from '../../assets/profile.jpg'
+import Curve from '../../components/common/Curve/Curve'
 
 
 const project = [
@@ -119,7 +120,7 @@ useEffect(() => {
 
 
     return (
-        <div className='section_project'>
+        <Curve className='section_project'>
             <Menu />
 
             <Navbar /><br />
@@ -271,7 +272,7 @@ useEffect(() => {
             </div>
 
             
-        </div>
+        </Curve>
     )
 }
 
