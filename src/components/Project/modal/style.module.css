@@ -7,7 +7,7 @@
     overflow: hidden;
     pointer-events: none;
     position: fixed;
-    z-index: 20;
+    z-index: 100;
 }
 
 .modalSlider {
@@ -46,7 +46,7 @@
     font-weight: 500;
     font-size: 12px;
     margin-left: 20px;
-    z-index: 20;
+    z-index: 100;
 }
 
 .cursorLabel {

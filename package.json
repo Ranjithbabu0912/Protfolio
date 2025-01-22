@@ -20,6 +20,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@gsap/react": "^2.1.1",
     "@lottiefiles/dotlottie-react": "^0.10.0",
+    "@react-navigation/native": "^7.0.14",
     "framer-motion": "^11.11.17",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",

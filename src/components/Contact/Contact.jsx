@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Button from '../common/Button/Button'
 import Magnatic from '../common/Magnatic/Magnatic'
-import Curve from '../common/Curve/Curve'
 
 
 const Contact = (data) => {
@@ -46,7 +45,7 @@ const Contact = (data) => {
 
 
     return (
-        <Curve>
+        <div>
             <div className='contact'>
                 <div className='contact_head'>
                     <img src={image} alt="profile img" />
@@ -99,7 +98,7 @@ const Contact = (data) => {
                 </div>
             </div>
 
-        </Curve>
+        </div>
     )
 }
 

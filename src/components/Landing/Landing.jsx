@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Img } from 'react-image';
 import background from '../../assets/background-removebg.png';
-import Curve from '../common/Curve/Curve';
 
 
 function Landing() {

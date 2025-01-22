@@ -36,7 +36,7 @@ body{
 }
 
 .contact_head h1:nth-of-type(2) {
-    margin-left: -810px;
+    margin-left: -760px;
     margin-top: 200px;
     
 }
@@ -100,7 +100,7 @@ hr {
 .footer {
     display: flex;
     justify-content: space-between;
-    margin: 80px 30px 0px 30px; 
+    margin: 50px 30px 0px 30px; 
 }
 
 .footer_item {

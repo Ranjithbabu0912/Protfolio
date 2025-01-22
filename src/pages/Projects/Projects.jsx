@@ -8,8 +8,8 @@ import { Img } from 'react-image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
 import styles from '../../components/Project/modal/style.module.css'
-import profile  from '../../assets/profile.jpg'
-import Curve from '../../components/common/Curve/Curve'
+import profile from '../../assets/profile.jpg'
+import transition from '../Transition'
 
 
 const project = [
@@ -48,7 +48,7 @@ const Projects = () => {
     const projectPage = useRef(null);
     const { scrollYProgress } = useScroll({
         target: projectPage,
-        offset: ["start end","end start"]
+        offset: ["start end", "end start"]
     })
     const height = useTransform(scrollYProgress, [0, 1], [200, 0])
 
@@ -109,25 +109,29 @@ const Projects = () => {
         };
     }, []);
 
+    const [show, setShow] = useState(false);
 
-useEffect(() => {
+
+    useEffect(() => {
         setTimeout(() => {
             document.body.style.cursor = 'default';
             document.body.style.overflow = 'visible';
-
-        }, 100)
+            setShow(true);
+        }, 1000)
     }, [])
 
 
+
     return (
-        <Curve className='section_project'>
+
+        <div className='section_project'>
             <Menu />
 
             <Navbar /><br />
 
 
-            <div className='projects' id='projects' ref={projectPage}>
-                
+            <div className='projects' id='projects' ref={projectPage} style={{opacity : !show ? 0 : 1 }}>
+
 
                 <h1>Creating next level</h1>
                 <h1>Projects</h1>
@@ -202,7 +206,7 @@ useEffect(() => {
                 </div>
 
                 {/* Modal */}
-                
+
                 <motion.div
                     ref={container}
                     variants={scaleAnimation}
@@ -229,7 +233,7 @@ useEffect(() => {
                     </div>
                 </motion.div>
 
-                <div className='cursor'>
+                <div className='cursur'>
                     <motion.div
                         className={view === "list" ? styles.cursor : "cursor"}
                         ref={cursor}
@@ -250,6 +254,8 @@ useEffect(() => {
                 </div>
             </div>
 
+            {/* Curve for end */}
+
             <motion.div style={{ height }} className='circle_Container'>
                 <div className='slide_circle'></div>
             </motion.div>
@@ -262,7 +268,7 @@ useEffect(() => {
                     </div>
 
                     <hr />
-                    
+
                     <div className="icon_logo">
                         <p><a href='https://www.linkedin.com/in/ranjithbabu0912/' target="_blank"><i className="fa-brands fa-linkedin"></i> LinkedIn</a></p>
                         <p><a href='https://github.com/Ranjithbabu0912' target="_blank"><i className="fa-brands fa-github" aria-hidden="false"></i> GitHub</a></p>
@@ -271,9 +277,10 @@ useEffect(() => {
                 </div>
             </div>
 
-            
-        </Curve>
+
+        </div>
     )
+    
 }
 
-export default Projects
+export default transition(Projects)

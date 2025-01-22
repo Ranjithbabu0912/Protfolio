@@ -18,8 +18,8 @@ const Nav = ({ data }) => {
             href: "/about"
         },
         {
-            title: "Project",
-            href: "/project"
+            title: "Projects",
+            href: "/projects"
         },
         {
             title: "Contact",
@@ -94,8 +94,8 @@ const Nav = ({ data }) => {
                                 custom={data}
                             >
                                 {menuItem.map((item, index) => (
-                                    <Magnatic>
-                                        <div className='menuname' key={index}>
+                                    <Magnatic key={index}>
+                                        <div className='menuname'>
                                             <div className='nav_indicator'></div>
                                             <Link to={item.href}>{item.title}</Link>
                                         </div>
@@ -107,7 +107,7 @@ const Nav = ({ data }) => {
                                 <p>SOCIALS</p>
                                 <div className='socialname'>
                                     {socialItem.map((item, index) => (
-                                        <Magnatic>
+                                        <Magnatic key={index}>
                                             <motion.div
                                                 variants={slide}
                                                 animate="enter"

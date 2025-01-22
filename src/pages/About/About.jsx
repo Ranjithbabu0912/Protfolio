@@ -1,20 +1,22 @@
-import React,{useEffect, useRef} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import Desc from '../../components/Desc/Desc'
 import Menu from '../../components/Menu/Menu'
 import Navbar from '../../components/Navbar/Navbar'
 import './About.css'
 import profile from '../../assets/profile.jpg'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import Curve from '../../components/common/Curve/Curve'
+import transition from '../Transition'
 
 const About = () => {
 
+    const [show, setShow] = useState(false);
+    
     useEffect(() => {
             setTimeout(() => {
                 document.body.style.cursor = 'default';
                 document.body.style.overflow = 'visible';
-    
-            }, 100)
+                setShow(true);
+            }, 1000)
     }, [])
 
     const aboutPage = useRef(null);
@@ -26,12 +28,12 @@ const About = () => {
     
 
     return (
-        <Curve>
+        <div>
             <Navbar />
             <br />
             <Menu />
 
-            <div className='about' ref={aboutPage}>
+            <div className='about' ref={aboutPage} style={{opacity : !show ? 0 : 1 }}>
 
             <h1>Empowering brands to innovate </h1>
             <h1>and succeed in the evolving</h1>
@@ -60,8 +62,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </Curve>
+        </div>
     )
 }
 
-export default About
+export default transition(About);

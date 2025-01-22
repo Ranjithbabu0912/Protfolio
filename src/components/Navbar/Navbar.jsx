@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const [activeIndex, setActiveIndex] = useState(0); // Default active index
 
-    const navItems = ["Project", "About", "Contact"]; // Define navigation items
+    const navItems = ["Projects", "About", "Contact"]; // Define navigation items
 
 
     return (

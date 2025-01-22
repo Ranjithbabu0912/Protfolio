@@ -1,55 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import './scroll.css'
-import Loader from './components/Loader/Loader.jsx';
-import Landing from './components/Landing/Landing';
-import Menu from './components/Menu/Menu.jsx';
-import Desc from './components/Desc/Desc.jsx';
-import Project from './components/Project/Project.jsx';
-import SlidingImages from './components/SlidingImages/SlidingImages.jsx';
-import Contact from './components/Contact/Contact.jsx';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from './pages/Home/Home.jsx';
-import Curve from './components/common/Curve/Curve.jsx';
+import About from './pages/About/About.jsx'
+import Projects from './pages/Projects/Projects.jsx';
+import Contact from './pages/Contact/Contactme.jsx';
 
 
-function App({ Component, pageProps, router }) {
-    const [loading, setLoading] = useState(true);
-
-
-
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 2000)
-    }, [])
+function App() {
+    const location = useLocation();
 
     useEffect(() => {
-        setTimeout(() => {
-            document.body.style.cursor = 'default';
-            document.body.style.overflow = 'visible';
-        }, 3000)
-    }, [])
-
-
-
+        window.scrollTo(0, 0); // Scroll to top on route changes
+    }, [location]);
 
     return (
-        <div className='routes'>
-            <AnimatePresence mode='wait'>
-                {
-                    loading && <Loader />
-                }
+        <>
+            <AnimatePresence mode="wait">
+                <Routes location={location} key={location.pathname}>
+                    <Route index element={<Home />} />
+                    <Route path='/projects' element={<Projects />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/contact' element={<Contact />} />
+
+                </Routes>
             </AnimatePresence>
 
-            <Home />
-            <Menu />
-            <Landing />
-            <Desc />
-            <Project />
-            <SlidingImages />
-            <Contact />
-        </div>
+        </>
     );
 }
 
