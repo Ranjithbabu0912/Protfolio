@@ -1,7 +1,7 @@
 .nav {
     width: 97%;
     position: absolute;
-    z-index: 10;
+    z-index: 20;
     display: flex;
     justify-content: space-between;
     margin: 20px;
@@ -125,3 +125,16 @@
 }
 
 
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    /* Styles for tablet and up */
+    .navigation {
+        display: none;
+    }
+
+    .nav {
+        left: 50%;
+    }
+
+}

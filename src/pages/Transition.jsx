@@ -98,7 +98,7 @@ const transition = (OgComponent) => {
                         className="slide-in"
                         initial={{ scaleY: 0 }}
                         animate={{ scaleY: 1 }}
-                        exit={{ scaleY: 1 }}
+                        exit={{ scaleY: 0 }}
                         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                         style={{
                             position: 'fixed',

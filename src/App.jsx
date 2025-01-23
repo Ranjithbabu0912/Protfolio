@@ -7,6 +7,7 @@ import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx'
 import Projects from './pages/Projects/Projects.jsx';
 import Contact from './pages/Contact/Contactme.jsx';
+import MenuManager from './components/Menu/MenuManager/index.jsx';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     }, [location]);
 
     return (
-        <>
+        <MenuManager>
             <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
                     <Route index element={<Home />} />
@@ -28,7 +29,7 @@ function App() {
                 </Routes>
             </AnimatePresence>
 
-        </>
+        </MenuManager>
     );
 }
 

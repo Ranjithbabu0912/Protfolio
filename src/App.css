@@ -11,6 +11,12 @@
 body {
     cursor: wait;
     overflow: hidden;
+    overflow-x: hidden !;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
 }
 
 .slide-in,
@@ -32,7 +38,7 @@ body {
 
 .circle_Container {
     position: relative;
-    height: 50px; 
+    height: 50px;
 }
 
 .circle_slide {
@@ -40,7 +46,8 @@ body {
     position: absolute;
     height: 1500%;
     width: 120%;
-    left: -5%;
+    left: -10%;
     background-color: rgb(41, 41, 41);
     border-radius: 0% 0% 50% 50%;
 }
+

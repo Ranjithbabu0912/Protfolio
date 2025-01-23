@@ -69,3 +69,46 @@
         z-index: 20;
     }
 }
+
+
+
+/* Tablet */
+@media screen and (max-width: 480px) {
+    /* Styles for tablet and up */
+    .description {
+        margin: 50px;
+        width: 100%;
+
+        .body {
+            width: 80%;
+            
+            p:nth-child(1) {
+                font-size: 18px;
+            }
+
+            p:nth-child(2) {
+                width: 90%;
+                font-size: 12px;
+            }
+            
+        }
+
+        .button {
+            position: relative;
+            left: calc(90% - 280px);
+            margin-top: 20px;
+            height: 150px;
+            width: 150px;
+
+            img {
+                height: 150px;
+                width: 150px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    
+}
