@@ -11,7 +11,7 @@ export default function index({title, desc, year, index, setModal}) {
     >
       <h2>{title}</h2>
       <p>{desc}</p>
-      <p>{year}</p>
+      {/* <p>{year}</p> */}
     </div>
   )
 }

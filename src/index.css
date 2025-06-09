@@ -7,7 +7,7 @@ body::-webkit-scrollbar{
 
 html,body
 {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
     scroll-behavior: smooth;
     width: 100%;

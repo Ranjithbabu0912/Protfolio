@@ -10,8 +10,12 @@
 
 body {
     cursor: wait;
+<<<<<<< HEAD
     overflow: hidden;
     overflow-x: hidden !;
+=======
+    /* overflow: hidden; */
+>>>>>>> 656389f (final commit)
     /* overflow-x: hidden; */
 }
 
