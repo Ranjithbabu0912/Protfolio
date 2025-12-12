@@ -134,7 +134,8 @@
     }
 
     .nav {
-        left: 50%;
+        position: absolute;
+        right: 0;
     }
 
 }

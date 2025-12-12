@@ -72,6 +72,10 @@ hr {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    &:hover{
+        color: #4d64f7;
+    }
 }
 
 .btn_line p {
@@ -100,7 +104,7 @@ hr {
 .footer {
     display: flex;
     justify-content: space-between;
-    margin: 50px 30px 0px 30px; 
+    margin: 200px 30px 0px 30px; 
 }
 
 .footer_item {
@@ -143,7 +147,7 @@ hr {
 }
 
 .underline {
-    margin-top: -20px;
+    margin-top: 1px;
     width: auto;
     height: 1px;
     background-color: white;

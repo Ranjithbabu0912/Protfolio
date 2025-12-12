@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const navItems = ["Projects", "About", "Contact"]; // Define navigation items
 
-
+   
     return (
         <div className='nav'>
             <Magnatic>

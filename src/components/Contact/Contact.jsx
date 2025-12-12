@@ -55,7 +55,7 @@ const Contact = (data) => {
                 </div>
                 <div className='btn_line'>
                     <hr />
-                    <Button className='contact_btn'>
+                    <Button className='contact_btn' backgroundColor='white'>
                         <p>Get in touch</p>
                     </Button>
                 </div>

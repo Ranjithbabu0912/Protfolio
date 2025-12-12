@@ -65,16 +65,18 @@ function Landing() {
 
                 <p>Frontend <br /> Developer &<br /> Designer</p>
             </div>
-            <main className="main" style={{ backgroundColor: 'lightgray' }}>
+            <main className="main">
                 <Img effect="blur" loading="lazy" src={background} alt="image" />
 
                 {/* work here for blank state */}
                 
 
-                    <div className="main_name">
+                    {/* <div className="main_name">
                     <p>Ranjith</p>
                     <p> Babu</p>
-                    </div>
+                    </div> */}
+
+                    
                 <div className="sliderContainer">
                     <div ref={slider} className="name_slider">
                         <p ref={firstText}>Ranjith Babu -</p>
