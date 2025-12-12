@@ -8,7 +8,7 @@ import About from './pages/About/About.jsx';
 import Projects from './pages/Projects/Projects.jsx';
 import Contact from './pages/Contact/Contactme.jsx';
 import MenuManager from './components/Menu/MenuManager/index.jsx';
-import ScrollContainer from './components/ScrollContainer'; // if you have this component
+import ScrollContainer from './components/scrollContainer.jsx'; // if you have this component
 import Lenis from 'lenis';
 
 function App() {
