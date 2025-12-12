@@ -32,7 +32,7 @@ const Project = () => {
                 <br />
                 <br />
                 <Button>
-                    <a href="/project" style={{ all: 'unset' }}><p className='project_btn'> More Work</p></a>
+                    <a href="/projects" style={{ all: 'unset' }}><p className='project_btn'> More Work</p></a>
                 </Button>
             </div>
         </>
