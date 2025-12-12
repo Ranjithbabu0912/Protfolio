@@ -8,7 +8,7 @@ import About from './pages/About/About.jsx';
 import Projects from './pages/Projects/Projects.jsx';
 import Contact from './pages/Contact/Contactme.jsx';
 import MenuManager from './components/Menu/MenuManager/index.jsx';
-import ScrollContainer from './components/scrollContainer.jsx'; // if you have this component
+import ScrollContainer from './components/scrollContainer.jsx'; // your custom wrapper
 import Lenis from 'lenis';
 
 function App() {
@@ -16,32 +16,55 @@ function App() {
   const rafId = useRef(null);
   const lenisRef = useRef(null);
 
-  // Scroll to top on route change (keeps default browser jump behavior prevented if you handle smooth-scroll)
+  // Scroll to top on route change — use Lenis if available to avoid conflicts.
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (lenisRef.current && typeof lenisRef.current.scrollTo === 'function') {
+      // jump to top immediately using Lenis so there's no visible animated jump
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      // fallback if Lenis not initialized yet
+      window.scrollTo(0, 0);
+    }
   }, [location]);
 
-  // Initialize Lenis and the RAF loop for smooth scrolling
+  // Initialize Lenis and RAF loop for smooth scrolling
   useEffect(() => {
-    lenisRef.current = new Lenis();
+    // guard for SSR environments
+    if (typeof window === 'undefined') return;
 
-    function raf(time) {
-      lenisRef.current.raf(time);
-      rafId.current = requestAnimationFrame(raf);
-    }
+    // create Lenis instance; you can pass options here if needed
+    lenisRef.current = new Lenis({
+      // optionally set duration, easing, or wrapper/content if you use a custom ScrollContainer
+      // duration: 1.2,
+      // smooth: true,
+      // wrapper: document.querySelector('[data-scroll-wrapper]'), // if your ScrollContainer uses a wrapper
+    });
 
-    rafId.current = requestAnimationFrame(raf);
-
-    // Cleanup on unmount
-    return () => {
-      if (rafId.current) cancelAnimationFrame(rafId.current);
-      // lenis has a destroy method in recent versions; call if available
-      if (lenisRef.current && typeof lenisRef.current.destroy === 'function') {
-        lenisRef.current.destroy();
+    const loop = (time) => {
+      if (lenisRef.current && typeof lenisRef.current.raf === 'function') {
+        lenisRef.current.raf(time);
       }
-      lenisRef.current = null;
+      rafId.current = requestAnimationFrame(loop);
     };
-  }, []);
+
+    rafId.current = requestAnimationFrame(loop);
+
+    return () => {
+      // cancel loop
+      if (rafId.current) {
+        cancelAnimationFrame(rafId.current);
+        rafId.current = null;
+      }
+
+      // destroy lenis if available (some versions provide destroy)
+      if (lenisRef.current) {
+        if (typeof lenisRef.current.destroy === 'function') {
+          lenisRef.current.destroy();
+        }
+        lenisRef.current = null;
+      }
+    };
+  }, []); // run once
 
   return (
     <ScrollContainer>
